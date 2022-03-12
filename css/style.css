@@ -1,0 +1,1506 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/**** Media Queries ****/
+
+/***** Mobile Phone *****/
+
+@media only screen and (max-width: 600px) {
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    .Errand-logo {
+        width: auto;
+        height: 10rem;
+    }
+
+    .back-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .stroke {
+        border: 1px solid #E4E6E8;
+        width: 100%;
+    }
+
+
+    .main-wrapper .create-sender-account {
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .create-sender-account h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        font-style: normal;
+        color: #171721;
+        padding-bottom: 5px;
+    }
+
+    .create-sender-account p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #8083A3;
+    }
+
+    .google-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .google-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #1C375A29;
+        padding: 10px 10px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .google-icon-wrapper img {
+        width: 19px;
+        height: 19px;
+        margin-right: 15px;
+    }
+
+    .google-icon-wrapper a {
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(27, 43, 65, 0.72);
+        position: relative;
+    } 
+
+    .google-icon-wrapper a::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 1px;
+        background-color: rgba(27, 43, 65, 0.72);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .google-icon-wrapper a:hover::after {
+        width: 100%;
+        opacity: .9;
+    }
+
+    .or-space {
+        margin: 10% 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .or-space .line {
+        border: 1px solid rgba(28, 52, 84, 0.26);
+        width: 45%;
+    }
+
+    .or-word {
+        font-family: 'M PLUS 1p', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 100%;
+        color: rgba(28, 52, 84, 0.26);
+    }
+
+
+    .fullname,
+    .email,
+    .password,
+    .confirm-password {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    /*** Full-Name Entries ***/
+
+    .fullname label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(27, 43, 65, 0.72);
+        margin-bottom: 3%;
+    }
+
+    .fullname input[type="text"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .fullname input[type="text"]:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .fullname input[type="text"]::placeholder {
+        color: rgba(24, 39, 58, 0.94);
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #name-err {
+        padding-top: 3px;
+        color: red;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /**** Email Entries ****/
+
+    .email label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .email input[type="text"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .email input[type="text"]:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .email input[type="text"]::placeholder {
+        color: rgba(24, 39, 58, 0.94);
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #email-err {
+        padding-top: 3px;
+        color: red;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /**** Password ****/
+
+    .password {
+        position: relative;
+    }
+
+    .password label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .password input[type="password"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    #password:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .password img {
+        position: absolute;
+        bottom: 15%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        opacity: .8;
+        cursor: pointer;
+    }
+
+
+    /***** Confirm Password *****/
+
+    .confirm-password {
+        position: relative;
+    }
+
+    .confirm-password label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .confirm-password input[type="password"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    #confirm-password:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .confirm-password img {
+        position: absolute;
+        bottom: 15%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    /**** Radio *****/
+
+    .radio {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 10% 0px;
+        position: relative;
+    }
+
+    .contain input {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    .contain input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+        background-color: #82489C;
+    }
+
+    /**** CheckBox ****/
+
+    .mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: rgba(128, 128, 128, 0.349);
+        border-radius: 4px;
+    }
+
+    .contain:hover input ~ .mark {
+        background-color: gray;
+    }
+
+    .contain input:checked ~ .mark {
+        background-color: #82489C;
+    }
+
+    .mark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .contain input:checked ~ .mark::after {
+        display: block;
+    }
+
+    .contain .mark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .radio p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.4px;
+    }
+
+    .terms-of-service {
+        text-decoration: none;
+        color: #82489C;
+        position: relative;
+        font-weight: 600;
+    }
+
+    .terms-of-service::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #82489C;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .terms-of-service:hover::after {
+        width: 100%;
+    }
+
+    .sign-up-btn {
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 100%;
+        background-color: #82489C;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 6px;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .sign-up-btn:hover {
+        opacity: .9;
+    }
+
+    /*** Sign in ****/
+
+    .sign-in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .sign-in p {
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .sign-in a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: #82489C;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        position: relative;
+    }
+
+    .sign-in a::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: #82489C;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .sign-in a:hover::after {
+        width: 100%;
+    }
+}
+
+
+
+
+/***** Tablet Potrait  & Mobile Phone Landscape*****/
+
+@media only screen and (min-width: 600.1px) and (max-width: 900px) {
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    /**** Errand Logo ****/
+
+    .Errand-logo {
+        width: auto;
+        height: 11rem;
+    }
+
+    /**** Back Icon ****/
+
+    .back-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /**** Horizontal Line beneath the Header ****/
+
+    .stroke {
+        border: 1px solid #E4E6E8;
+        width: 100%;
+    }
+
+
+    /***** Main Page *****/
+
+    .main-wrapper .create-sender-account {
+        text-align: center;
+        margin: 5% 0px;
+    }
+
+    .create-sender-account h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 36px;
+        font-style: normal;
+        color: #171721;
+        padding-bottom: 10px;
+    }
+
+    .create-sender-account p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+        color: #8083A3;
+    }
+
+    .google-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .google-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #1C375A29;
+        padding: 15px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .google-icon-wrapper img {
+        width: 21px;
+        height: 21px;
+        margin-right: 15px;
+    }
+
+    .google-icon-wrapper a {
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        color: rgba(27, 43, 65, 0.72);
+        position: relative;
+    } 
+
+    .google-icon-wrapper a::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: rgba(27, 43, 65, 0.72);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .google-icon-wrapper a:hover::after {
+        width: 100%;
+        opacity: .9;
+    }
+
+    .or-space {
+        margin: 6% 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .or-space .line {
+        border: 1px solid rgba(28, 52, 84, 0.26);
+        width: 45%;
+    }
+
+    .or-word {
+        font-family: 'M PLUS 1p', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 100%;
+        color: rgba(28, 52, 84, 0.26);
+    }
+
+
+    .fullname,
+    .email,
+    .password,
+    .confirm-password {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    /*** Full-Name Entries ***/
+
+    .fullname label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(27, 43, 65, 0.72);
+        margin-bottom: 3%;
+    }
+
+    .fullname input[type="text"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .fullname input[type="text"]:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .fullname input[type="text"]::placeholder {
+        color: rgba(24, 39, 58, 0.94);
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #name-err {
+        padding-top: 3px;
+        color: red;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /**** Email Entries ****/
+
+    .email label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .email input[type="text"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .email input[type="text"]:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .email input[type="text"]::placeholder {
+        color: rgba(24, 39, 58, 0.94);
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #email-err {
+        padding-top: 3px;
+        color: red;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /**** Password ****/
+
+    .password {
+        position: relative;
+    }
+
+    .password label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .password input[type="password"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #password:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .password img {
+        position: absolute;
+        bottom: 13%;
+        right: 10px;
+        width: 18px;
+        height: 18px;
+        opacity: .8;
+        cursor: pointer;
+    }
+
+
+    /***** Confirm Password *****/
+
+    .confirm-password {
+        position: relative;
+    }
+
+    .confirm-password label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .confirm-password input[type="password"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #confirm-password:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .confirm-password img {
+        position: absolute;
+        bottom: 14%;
+        right: 10px;
+        width: 18px;
+        height: 18px;
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    /**** Radio *****/
+
+    .radio {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 7% 0px;
+        position: relative;
+    }
+
+    .contain input {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    .contain input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+        margin-right: 15px;
+        background-color: #82489C;
+    }
+
+    /**** CheckBox ****/
+
+    .mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: rgba(128, 128, 128, 0.349);
+        border-radius: 4px;
+    }
+
+    .contain:hover input ~ .mark {
+        background-color: gray;
+    }
+
+    .contain input:checked ~ .mark {
+        background-color: #82489C;
+    }
+
+    .mark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .contain input:checked ~ .mark::after {
+        display: block;
+    }
+
+    .contain .mark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .radio p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 16.4px;
+    }
+
+    .terms-of-service {
+        text-decoration: none;
+        color: #82489C;
+        position: relative;
+        font-weight: 600;
+    }
+
+    .terms-of-service::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #82489C;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .terms-of-service:hover::after {
+        width: 100%;
+    }
+
+    .sign-up-btn {
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 100%;
+        background-color: #82489C;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 6px;
+        padding: 18px;
+        cursor: pointer;
+    }
+
+    .sign-up-btn:hover {
+        opacity: .9;
+    }
+
+    /*** Sign in ****/
+
+    .sign-in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5% auto;
+    }
+
+    .sign-in p {
+        font-family: Lato;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .sign-in a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: #82489C;
+        font-family: Lato;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+        position: relative;
+    }
+
+    .sign-in a::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #82489C;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .sign-in a:hover::after {
+        width: 100%;
+    }
+}
+
+
+/***** Tablet Landscape*****/
+
+@media only screen and (min-width: 900.1px) and (max-width: 1200px) {
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    /**** Errand Logo ****/
+
+    .Errand-logo {
+        width: auto;
+        height: 12rem;
+    }
+
+    /**** Back Icon ****/
+
+    .back-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /**** Horizontal Line beneath the Header ****/
+
+    .stroke {
+        border: 1px solid #E4E6E8;
+        width: 100%;
+    }
+
+
+    /***** Main Page *****/
+
+    .main-wrapper .create-sender-account {
+        text-align: center;
+        margin: 5% 0px;
+    }
+
+    .create-sender-account h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 43px;
+        line-height: 36px;
+        font-style: normal;
+        color: #171721;
+        padding-bottom: 12px;
+    }
+
+    .create-sender-account p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #8083A3;
+    }
+
+    .google-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .google-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #1C375A29;
+        padding: 15px;
+        border-radius: 4px;
+        width: 50%;
+    }
+
+    .google-icon-wrapper img {
+        width: 21px;
+        height: 21px;
+        margin-right: 15px;
+    }
+
+    .google-icon-wrapper a {
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: rgba(27, 43, 65, 0.72);
+        position: relative;
+    } 
+
+    .google-icon-wrapper a::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: rgba(27, 43, 65, 0.72);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .google-icon-wrapper a:hover::after {
+        width: 100%;
+        opacity: .9;
+    }
+
+    .or-space {
+        margin: 5% 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .or-space .line {
+        border: 1px solid rgba(28, 52, 84, 0.26);
+        width: 48%;
+    }
+
+    .or-word {
+        font-family: 'M PLUS 1p', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 100%;
+        color: rgba(28, 52, 84, 0.26);
+    }
+
+    .form-wrapper {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .fullname,
+    .email,
+    .password,
+    .confirm-password {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    /*** Full-Name Entries ***/
+
+    .fullname label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: rgba(27, 43, 65, 0.72);
+        margin-bottom: 3%;
+    }
+
+    .fullname input[type="text"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 14px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .fullname input[type="text"]:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 14px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .fullname input[type="text"]::placeholder {
+        color: rgba(24, 39, 58, 0.94);
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    #name-err {
+        padding-top: 3px;
+        color: red;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /**** Email Entries ****/
+
+    .email label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .email input[type="text"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 14px;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .email input[type="text"]:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 14px;
+        border-radius: 6px;
+    }
+
+    .email input[type="text"]::placeholder {
+        color: rgba(24, 39, 58, 0.94);
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    #email-err {
+        padding-top: 3px;
+        color: red;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /**** Password ****/
+
+    .password {
+        position: relative;
+    }
+
+    .password label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .password input[type="password"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    #password:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .password img {
+        position: absolute;
+        bottom: 13%;
+        right: 10px;
+        width: 18px;
+        height: 18px;
+        opacity: .5;
+        cursor: pointer;
+    }
+
+
+    /***** Confirm Password *****/
+
+    .confirm-password {
+        position: relative;
+    }
+
+    .confirm-password label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+        color: rgba(27, 43, 65, 0.72);
+        margin: 5% 0px 3%;
+    }
+
+    .confirm-password input[type="password"] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    #confirm-password:focus {
+        width: 100%;
+        background: #FFFFFF;
+        outline: 1px solid rgba(28, 55, 90, 0.16);
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .confirm-password img {
+        position: absolute;
+        bottom: 13%;
+        right: 10px;
+        width: 18px;
+        height: 18px;
+        opacity: .6;
+        cursor: pointer;
+    }
+
+    /**** Radio *****/
+
+    .radio {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 7% 0px;
+        position: relative;
+    }
+
+    .contain input {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    .contain input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+        margin-right: 15px;
+        background-color: #82489C;
+    }
+
+    /**** CheckBox ****/
+
+    .mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: rgba(128, 128, 128, 0.349);
+        border-radius: 4px;
+    }
+
+    .contain:hover input ~ .mark {
+        background-color: gray;
+    }
+
+    .contain input:checked ~ .mark {
+        background-color: #82489C;
+    }
+
+    .mark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .contain input:checked ~ .mark::after {
+        display: block;
+    }
+
+    .contain .mark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .radio p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16.4px;
+    }
+
+    .terms-of-service {
+        text-decoration: none;
+        color: #82489C;
+        position: relative;
+        font-weight: 600;
+    }
+
+    .terms-of-service::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #82489C;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .terms-of-service:hover::after {
+        width: 100%;
+    }
+
+    .sign-up-btn {
+        font-family: Lato;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 100%;
+        background-color: #82489C;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 6px;
+        padding: 18px;
+        cursor: pointer;
+    }
+
+    .sign-up-btn:hover {
+        opacity: .9;
+    }
+
+    /*** Sign in ****/
+
+    .sign-in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5% auto;
+    }
+
+    .sign-in p {
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .sign-in a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: #82489C;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+        position: relative;
+    }
+
+    .sign-in a::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #82489C;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .sign-in a:hover::after {
+        width: 100%;
+    }
+}
