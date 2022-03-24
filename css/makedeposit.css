@@ -1,0 +1,310 @@
+@import url(./css/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+
+.main-wrapper {
+    margin: auto;
+    width: 100%;
+    padding: 40px 30px;
+}
+
+@media screen and (max-width: 320px) {
+    .main-wrapper {
+        padding: 20px 10px;
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20%;
+    align-items: center;
+    margin: 0 0 40px 0;
+}
+
+@media screen and (max-width: 320px) {
+    .header-wrapper {
+        gap: 22%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .header-wrapper {
+        gap: 38%;
+    }
+}
+
+.header-wrapper img {
+    height: 32px;
+    width: 32px;
+    line-height: 21px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+@media screen and (max-width: 320px) {
+    .header-wrapper img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .header-wrapper img {
+        height: 34px;
+        width: 34px;
+        line-height: 21px;
+    }
+}
+
+.select-amount {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 29px;
+}
+
+@media screen and (max-width: 320px) {
+    .select-amount {
+        font-size: 21px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .select-amount {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+
+.deposit-section {
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: 0 0 100px 0;
+}
+
+@media screen and (max-width: 320px) {
+    .deposit-section {
+        margin: 0 0 80px 0;
+    }
+}
+
+
+form {
+    margin: 25px;
+}
+
+@media screen and (max-width: 320px) {
+    form {
+        margin: 15px 10px 25px 10px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    form {
+        margin: 30px 25px 35px 25px;
+    }
+}
+
+#err {
+    color: rgba(255, 0, 0, 0.829);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+
+#amount {
+    width: 100%;
+    height: 45px;
+    border-radius: 7px;
+    background: rgba(130, 72, 156, 0.07);
+    border: 1px solid transparent;
+    padding: 0 15px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 320px) {
+    #amount {
+        font-size: 15px;
+        padding: 0 12px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #amount {
+        height: 48px;
+        font-size: 18px;
+    }
+}
+
+#amount::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 320px) {
+    #amount::placeholder {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #amount::placeholder {
+        font-size: 16px;
+    }
+}
+
+#amount:focus {
+    border-color: #82489C;
+    outline: none;
+}
+
+.quick-amount {
+    font-family: 'Public Sans', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 45px 0 15px 0;
+    position: relative;
+}
+
+@media screen and (max-width: 320px) {
+    .quick-amount {
+        font-size: 15px;
+        line-height: 16px;
+        margin: 40px 0 15px 0;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .quick-amount {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.quick-amount::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: -22px;
+    left: 0;
+    background-color: rgba(130, 72, 156, 0.15);;
+}
+
+
+.button {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+
+@media screen and (max-width: 320px) {
+    .button {
+        grid-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .button {
+        grid-gap: 50px;
+    }
+}
+
+.button .btn {
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.25);
+    color: #000;
+    border-radius: 5px;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16.45px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 320px) {
+    .button .btn {
+        font-size: 15px;
+        line-height: 15.45px;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .button .btn {
+        font-size: 18px;
+        line-height: 18.45px;
+        padding: 12px 15px;
+    }
+}
+
+.button .btn:hover,
+.button .btn:active {
+    background-color: #82489C;
+    color: #fff;
+}
+
+
+.main-footer {
+    width: 100%;
+}
+
+.make-deposit {
+    background-color: #82489C;
+    color: #fff;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    height: 60px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+    .make-deposit {
+        font-size: 15px;
+        line-height: 21px;
+        height: 52px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .make-deposit {
+        font-size: 18px;
+        line-height: 24px;
+        height: 64px;
+    }
+    
+}
+
+.make-deposit:hover {
+    opacity: .9;
+}
+

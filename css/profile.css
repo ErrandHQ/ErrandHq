@@ -1,0 +1,458 @@
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        min-height: 125vh;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 376px) {
+    body {
+        min-height: 110vh;
+    }
+}
+
+@media only screen and (min-width: 377px) and (max-width: 480px) {
+    body {
+        min-height: 104vh;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        height: 100%;
+        min-height: 140vh;
+    }
+}
+
+
+
+/** Main-Header **/
+
+header .profile {
+    background: rgba(242, 234, 245, 0.57);
+    background-image: url('../img/seamless-pattern-mail-envelopes-vector-background-postal-delivery-93224452\ 1.png');
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5% 0 10% 0;
+    height: 45%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    header .profile {
+        height: 100%;
+        padding: 10px 0 20px 0;
+    }
+}
+
+/*** Profile ***/
+
+.profile h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .profile h2 {
+        color: #000;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0.01em;
+    }
+}
+
+/** Profile Image **/
+
+.profile-img {
+    width: 103px;
+    height: 113px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .profile-img {
+        width: 143px;
+        height: 153px;
+    }
+
+}
+
+.profile-img img {
+    border-radius: 100%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .profile-img img {
+        border-radius: 100%;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.profile .fullName {
+    letter-spacing: 0.01em;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .profile .fullName {
+        letter-spacing: 0.01em;
+    }
+    
+}
+
+.profile .fund-balance {
+    background-color: #FFF;
+    width: 137px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .profile .fund-balance {
+        width: 147px;
+        height: 45px;
+        padding: 0 13px;
+        margin: 30px 0px 0px 0px;
+    }
+}
+
+/** Wallet **/
+
+.fund-balance img {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .fund-balance img {
+        width: 22px;
+        height: 22px;
+        margin-right: 15px;
+    }
+    
+}
+
+
+/** Wallet Balance **/
+#balance-amount {
+    color: #82489C;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 24px;
+    position: relative;
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    #balance-amount {
+        font-size: 28px;
+        line-height: 26px;
+    }
+}
+
+
+/** Naira Icon **/
+#balance-amount::before {
+    position: absolute;
+    content: url('../img/Naira.png');
+    width: 17.5px;
+    height: 17.5px;
+    left: -17.5px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    #balance-amount::before {
+        position: absolute;
+        top: -1px;
+        transform: scale(1.1);
+    }
+}
+
+
+/** Main **/
+.main-wrapper {
+    background-color: #FFF;
+    margin: 10% 0 15% 0;
+    padding: 0 20px;
+    height: min-content;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .main-wrapper {
+        margin: 8% 0 15%;
+        padding: 0 40px;
+    }
+}
+
+
+.main-wrapper h4 {
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #000;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .main-wrapper h4 {
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.01em;
+    }
+}
+
+/** Right----> Icon **/
+
+.main-wrapper img {
+    width: 7px;
+    height: 14px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .main-wrapper img {
+        width: 9px;
+        height: 16px;
+    }
+}
+
+.user-profile a {
+    background-color: rgba(130, 72, 156, 0.07);
+    width: 100%;
+    border-radius: 15px;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    text-decoration: none;
+    margin: 0 0 4% 0;
+    opacity: 1;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .user-profile a {
+        height: 50px;
+        padding: 13px;
+        margin: 0 0 4% 0;
+    }
+}
+
+.user-profile a:hover {
+    opacity: .8;
+}
+
+/** User Icon **/
+
+.user-icon {
+    position: relative;
+    margin-left: 35px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .user-icon {
+        position: relative;
+        margin-left: 35px;
+    }
+}
+
+/** Personal Details **/
+
+.personal-icon::before {
+    position: absolute;
+    content: url('../img/Personal-details.png');
+    width: 16.67px;
+    height: 15px;
+    left: -35px;
+    top: 3px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .personal-icon::before {
+        transform: scale(1.1);
+        left: -35px;
+        top: 1px;
+    }
+}
+
+
+/** Payment icon **/
+
+.payment-icon::before {
+    position: absolute;
+    content: url('../img/Payment.png');
+    width: 16.67px;
+    height: 15px;
+    left: -35px;
+    top: 3px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .payment-icon::before {
+        transform: scale(1.1);
+        left: -35px;
+        top: 2px;
+    }
+}
+
+/** Delivery icon **/
+
+.delivery-icon::before {
+    position: absolute;
+    content: url('../img/Address.png');
+    width: 16.67px;
+    height: 15px;
+    left: -35px;
+    top: 3px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .delivery-icon::before {
+        transform: scale(1.1);
+        left: -35px;
+        top: 1px;
+    }
+}
+
+/** Help icon **/
+
+.help-icon::before {
+    position: absolute;
+    content: url('../img/Help-Support.png');
+    width: 16.67px;
+    height: 15px;
+    left: -35px;
+    top: 3px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .help-icon::before {
+        transform: scale(1.1);
+        left: -35px;
+        top: 2px;
+    }
+}
+
+/** Log out icon */
+
+.log-icon::before {
+    position: absolute;
+    content: url('../img/Log\ out.png');
+    width: 16.67px;
+    height: 15px;
+    left: -35px;
+    top: 3px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .log-icon::before {
+        transform: scale(1.1);
+        left: -35px;
+        top: 1px;
+    }
+}
+
+
+/** Footer **/
+.footer-wrapper {
+    border-top: 1px solid #545454;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    background-color: #FFF;
+    padding-top: 5px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .footer-wrapper {
+        border-top: 1px solid #545454;
+        padding: 0% 0px 0% 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+    }
+}
+
+/** User Navigation **/
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+.user:hover, .user:active {
+    color: #000;
+}
+
+.user h5 {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    margin-block-end: 10%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .user h5 {
+        font-size: 14px;
+        margin-block-end: 10%;
+    }
+}
+
+.user img {
+    width: 23px;
+    height: 23px;
+    margin: 9px 0 -15px 0px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .user img {
+        width: 26px;
+        height: 26px;
+        margin: 10px 0 -15px 0px;
+    }
+}
+

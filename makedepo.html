@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errand HQ Make Deposit</title>
+    <link rel="shortcut icon" href="img/ErrandHQ-Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/makedeposit.css">
+</head>
+<body>
+    <main class="main-wrapper">
+        <header class="header-wrapper">
+            <div>
+                <a href="#">
+                    <img class="back-icon" src="img/icon-back.png"/>
+                </a>
+            </div>
+            <div>
+                <h2 class="select-amount">Select Amount</h2>
+            </div>
+        </header>
+
+        <section class="deposit-section">
+            <form action="">
+                <div id="err"></div>
+                <input type="tel" value="" class="amount" name="amount" id="amount" placeholder="Please enter the deposit amount">
+                <div class="quick-amount">Quick Amount</div>
+                <div class="button">
+                    <button class="btn1 btn" id="btn1" onclick="btn1k()">1000</button>
+                    <button class="btn2 btn" onclick="btn5k()">5000</button>
+                    <button class="btn3 btn" onclick="btn7k()">7000</button>
+                </div>
+            </form>
+        </section>
+
+        <footer class="main-footer">
+            <button class="make-deposit" onclick="makeDeposit()">Make Deposit</button>
+        </footer>
+    </main>
+
+    <script src="js/makedepo.js"></script>
+    
+</body>
+</html>
