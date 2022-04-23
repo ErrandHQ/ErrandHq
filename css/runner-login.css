@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+@import url('/CSS/normalize.css');
 
 
 * {
@@ -35,8 +36,8 @@
     }
 
     .back-icon {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
 
     .stroke {
@@ -44,13 +45,12 @@
         width: 100%;
     }
 
-
-    .main-wrapper .create-sender-account {
+    .main-wrapper .log-in {
         text-align: center;
         margin: 20px 0px;
     }
 
-    .create-sender-account h3 {
+    .log-in h3 {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
         font-size: 28px;
@@ -60,7 +60,7 @@
         padding-bottom: 5px;
     }
 
-    .create-sender-account p {
+    .log-in p {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         font-size: 14px;
@@ -72,6 +72,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 20px 0 80px 0;
     }
 
     .google-icon-wrapper {
@@ -138,6 +139,11 @@
     }
 
 
+    .form-wrapper {
+        margin-top: 30px;
+    }
+
+
     .fullname,
     .email,
     .password,
@@ -150,7 +156,7 @@
 
 
     /*** Full-Name Entries ***/
-
+/**
     .fullname label {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
@@ -188,6 +194,7 @@
         font-size: 14px;
         line-height: 22px;
     }
+    **/
 
     #name-err {
         padding-top: 3px;
@@ -286,17 +293,95 @@
 
     .password img {
         position: absolute;
-        bottom: 15%;
+        bottom: 14%;
         right: 10px;
         width: 16px;
         height: 16px;
-        opacity: .8;
+        opacity: .6;
         cursor: pointer;
     }
 
 
-    /***** Confirm Password *****/
+    
+    #forgot-password {
+        background-color: #fff;
+        box-shadow: 4px 10px 14px rgb(77, 77, 77);
+        border-radius: 10px;
+        padding: 30px 20px 50px 20px;
+        text-align: start;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        position: absolute;
+        top: -100px;
+        left: 0px;
+        z-index: 999;
+        width: 100%;
+        transition: all 1s ease-in-out;
+        display: none;
+    }
 
+    #forgot-password h1 {
+        font-size: 18px;
+        line-height: 21px;
+        color: #171721;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    #forgot-password .input {
+        display: grid;
+        place-content: start;
+        grid-gap: 10px;
+        grid-auto-columns: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+
+    .input label {
+        color: #171721;
+        font-size: 19px;
+        line-height: 21px;  
+    }
+
+    .input input[type='text'] {
+        padding: 10px;
+        border-radius: 6px;
+        outline: none;
+        border: 1px solid #17172186;
+        font-size: 17px;
+        color: #171721;
+    }
+
+    #forgot-password .button {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: auto;
+        justify-content: space-between;
+    }
+
+    #forgot-password .button button {
+        font-size: 16px;
+        background-color: #82489C;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        opacity: .8;
+    }
+
+    #forgot-password .button button:hover {
+        opacity: 1;
+    }
+
+    #forgot-password .button .cancel{
+        width: 50%;
+    }
+
+    
+
+
+    /***** Confirm Password *****/
+    /**
     .confirm-password {
         position: relative;
     }
@@ -332,13 +417,15 @@
 
     .confirm-password img {
         position: absolute;
-        bottom: 15%;
+        bottom: 14%;
         right: 10px;
         width: 16px;
         height: 16px;
-        opacity: .8;
+        opacity: .6;
         cursor: pointer;
     }
+
+    *******/
 
     /**** Radio *****/
 
@@ -407,14 +494,49 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 16.4px;
+        color: rgba(27, 43, 65, 0.72);
     }
 
+
+    .forgot-password {
+        margin-inline-start: auto;
+        text-decoration: none;
+        color: #82489C;
+        opacity: .95;
+        font-size: 14px;
+        line-height: 16px;
+        position: relative;
+    }
+
+    .forgot-password:hover,
+    .forgot-password:active {
+        opacity: 1;
+    }
+
+    .forgot-password::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: #82489C;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .forgot-password:hover::after {
+        width: 100%;
+    }
+
+    /*
     .terms-of-service {
         text-decoration: none;
         color: #82489C;
         position: relative;
         font-weight: 600;
     }
+
+    
 
     .terms-of-service::after {
         position: absolute;
@@ -431,7 +553,9 @@
         width: 100%;
     }
 
-    .sign-up-btn {
+    */
+
+    .log-in-btn {
         font-family: Lato;
         font-size: 16px;
         font-style: normal;
@@ -446,10 +570,11 @@
         border-radius: 6px;
         padding: 15px;
         cursor: pointer;
+        opacity: 0.9;
     }
 
-    .sign-up-btn:hover {
-        opacity: .9;
+    .log-in-btn:hover {
+        opacity: 1;
     }
 
     /*** Sign in ****/
@@ -458,7 +583,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px auto;
+        margin: 20px auto 30px auto;
     }
 
     .sign-in p {
@@ -546,12 +671,12 @@
 
     /***** Main Page *****/
 
-    .main-wrapper .create-sender-account {
+    .main-wrapper .log-in {
         text-align: center;
         margin: 5% 0px;
     }
 
-    .create-sender-account h3 {
+    .log-in h3 {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
         font-size: 38px;
@@ -561,7 +686,7 @@
         padding-bottom: 10px;
     }
 
-    .create-sender-account p {
+    .log-in p {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         font-size: 17px;
@@ -573,6 +698,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 20px 0 80px 0;
     }
 
     .google-icon-wrapper {
@@ -638,6 +764,10 @@
         color: rgba(28, 52, 84, 0.26);
     }
 
+    .form-wrapper {
+        margin-top: 30px;
+    }
+
 
     .fullname,
     .email,
@@ -651,7 +781,7 @@
 
 
     /*** Full-Name Entries ***/
-
+/**
     .fullname label {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
@@ -689,7 +819,7 @@
         font-size: 16px;
         line-height: 24px;
     }
-
+**/
     #name-err {
         padding-top: 3px;
         color: red;
@@ -791,13 +921,14 @@
         right: 10px;
         width: 18px;
         height: 18px;
-        opacity: .8;
+        opacity: .6;
         cursor: pointer;
     }
 
-
+    
     /***** Confirm Password *****/
 
+    /**
     .confirm-password {
         position: relative;
     }
@@ -837,10 +968,13 @@
         right: 10px;
         width: 18px;
         height: 18px;
-        opacity: .8;
+        opacity: .6;
         cursor: pointer;
     }
 
+    **/
+
+    
     /**** Radio *****/
 
     .radio {
@@ -906,33 +1040,43 @@
     .radio p {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 16.4px;
+        color: rgba(27, 43, 65, 0.72);
     }
 
-    .terms-of-service {
+    .forgot-password {
+        margin-inline-start: auto;
         text-decoration: none;
         color: #82489C;
+        opacity: .95;
+        font-size: 17px;
+        line-height: 16px;
         position: relative;
-        font-weight: 600;
     }
 
-    .terms-of-service::after {
+    .forgot-password:hover,
+    .forgot-password:active {
+        opacity: 1;
+    }
+
+    .forgot-password::after {
         position: absolute;
         content: "";
         width: 0%;
-        height: 2px;
+        height: 1px;
+        background-color: #82489C;
         bottom: 0;
         left: 0;
-        background-color: #82489C;
         transition: all 0.5s ease-in-out;
     }
 
-    .terms-of-service:hover::after {
+    .forgot-password:hover::after {
         width: 100%;
     }
 
-    .sign-up-btn {
+
+    .log-in-btn {
         font-family: Lato;
         font-size: 18px;
         font-style: normal;
@@ -949,7 +1093,7 @@
         cursor: pointer;
     }
 
-    .sign-up-btn:hover {
+    .log-in-btn:hover {
         opacity: .9;
     }
 
@@ -1045,12 +1189,12 @@
 
     /***** Main Page *****/
 
-    .main-wrapper .create-sender-account {
+    .main-wrapper .log-in {
         text-align: center;
         margin: 5% 0px;
     }
 
-    .create-sender-account h3 {
+    .log-in h3 {
         font-family: 'Lato', sans-serif;
         font-weight: 700;
         font-size: 43px;
@@ -1060,7 +1204,7 @@
         padding-bottom: 12px;
     }
 
-    .create-sender-account p {
+    .log-in p {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         font-size: 18px;
@@ -1072,6 +1216,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 20px 0 100px 0;
     }
 
     .google-icon-wrapper {
@@ -1139,7 +1284,7 @@
 
     .form-wrapper {
         width: 50%;
-        margin: 0 auto;
+        margin: 40px auto 0 auto;
     }
 
     .fullname,
@@ -1155,6 +1300,7 @@
 
     /*** Full-Name Entries ***/
 
+    /**
     .fullname label {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
@@ -1192,6 +1338,8 @@
         font-size: 17px;
         line-height: 24px;
     }
+
+    **/
 
     #name-err {
         padding-top: 3px;
@@ -1301,6 +1449,8 @@
 
     /***** Confirm Password *****/
 
+/**
+
     .confirm-password {
         position: relative;
     }
@@ -1343,6 +1493,8 @@
         opacity: .6;
         cursor: pointer;
     }
+
+    **/
 
     /**** Radio *****/
 
@@ -1409,33 +1561,44 @@
     .radio p {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 17px;
         line-height: 16.4px;
+        color: rgba(27, 43, 65, 0.72);
     }
 
-    .terms-of-service {
+    .forgot-password {
+        margin-inline-start: auto;
         text-decoration: none;
         color: #82489C;
+        opacity: .95;
+        font-size: 17px;
+        line-height: 16px;
         position: relative;
-        font-weight: 600;
     }
 
-    .terms-of-service::after {
+    .forgot-password:hover,
+    .forgot-password:active {
+        opacity: 1;
+    }
+
+    .forgot-password::after {
         position: absolute;
         content: "";
         width: 0%;
-        height: 2px;
+        height: 1px;
+        background-color: #82489C;
         bottom: 0;
         left: 0;
-        background-color: #82489C;
         transition: all 0.5s ease-in-out;
     }
 
-    .terms-of-service:hover::after {
+    .forgot-password:hover::after {
         width: 100%;
     }
 
-    .sign-up-btn {
+   
+
+    .log-in-btn {
         font-family: Lato;
         font-size: 19px;
         font-style: normal;
@@ -1452,7 +1615,7 @@
         cursor: pointer;
     }
 
-    .sign-up-btn:hover {
+    .log-in-btn:hover {
         opacity: .9;
     }
 

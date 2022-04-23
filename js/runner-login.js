@@ -1,3 +1,5 @@
+
+
 /**** Password Reveal */
 
 function passwordReveal() {
@@ -38,18 +40,19 @@ function confirmPassword() {
 
 function signUpBtn() {
 
-    /**Full name Validation */
+    /**Full name */
     let fullName = document.getElementById('fullName').value;
     let errorName = document.getElementById('name-err');
 
     errorName.innerHTML = "";
 
-    try {
+    try { 
         if (fullName == "") throw "Input is empty";
-        if (fullName.type != "text") throw "Enter a valid name";
     } catch(err) {
         errorName.innerHTML = err;
     }
+
+
 
     /** Email Validation */
 
@@ -59,9 +62,24 @@ function signUpBtn() {
     emailError.innerHTML = "";
 
     try {
-        if (emailValidation != '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/') throw "Enter a valid email address"
+        if (emailValidation == "") throw "Email is required"
+        if (emailValidation === '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/') throw "";
     } catch(err) {
         emailError.innerHTML = err;
     }
 
+}
+
+
+let forgotPassword = document.querySelector('.forgot-password')
+let forgotPasswordPanel = document.getElementById('forgot-password')
+
+forgotPassword.addEventListener('click', (event) => {
+    forgotPasswordPanel.style.display = 'block'
+    forgotPasswordPanel.style.top = '150px'
+    forgotPasswordPanel.style.transition = 'all 1s ease-in-out'
+});
+
+function cancel() {
+    forgotPasswordPanel.style.display = 'none'
 }
